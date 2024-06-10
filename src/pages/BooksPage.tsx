@@ -9,6 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ListFilter, MoreHorizontal, PlusCircle , File} from "lucide-react"
 import { Book } from "@/types"
+import { Link } from "react-router-dom"
 
 const BooksPage = () => {
 
@@ -76,12 +77,15 @@ const BooksPage = () => {
                     Export
                   </span>
                 </Button>
+
+                <Link to={"/dashboard/books/create"}>
                 <Button size="sm" className="h-8 gap-1">
                   <PlusCircle className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
                     Add Product
                   </span>
                 </Button>
+                </Link>
               </div>
             </div>
             <TabsContent value="all">
