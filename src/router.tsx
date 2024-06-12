@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import LoginPage from "@/pages/Login";
 import HomePage from "@/pages/HomePage";
 import RegisterPage from "@/pages/RegisterPage";
@@ -8,6 +8,10 @@ import AuthLayout from "./layouts/AuthLayout";
 import CreateBook from "./pages/CreateBook";
 
 const router = createBrowserRouter([
+  {
+   path: '/',
+   element: <Navigate to="/dashbaord/home" />,
+  },
   {
     path: "dashboard",
     element: <DashboardLayout/>,
